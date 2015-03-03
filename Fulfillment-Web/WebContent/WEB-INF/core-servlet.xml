@@ -1,0 +1,93 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:p="http://www.springframework.org/schema/p"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:util="http://www.springframework.org/schema/util"
+   	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+ <context:component-scan base-package="com.mavrick.controllers"/>
+   
+ <mvc:annotation-driven /> 
+ 
+<!-- Hibernate configuration Starts -->
+<bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+        p:location="/WEB-INF/resources/jdbc.properties"></bean>
+
+<bean id="sessionFactory"
+        class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation">
+            <value>/WEB-INF/resources/hibernate.cfg.xml</value>
+        </property>
+        <property name="configurationClass">
+            <value>org.hibernate.cfg.AnnotationConfiguration</value>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${jdbc.dialect}</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+  <bean id="dataSource"
+        class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+        p:driverClassName="${jdbc.driverClassName}"
+        p:url="${jdbc.databaseurl}" p:username="${jdbc.username}"
+        p:password="${jdbc.password}" />
+ 
+ 
+    <tx:annotation-driven />
+    <bean id="transactionManager"
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+ 
+<!-- Hiberante configuration Ends   -->
+
+<!-- BusinessLogic configuration starts -->
+<bean id="basicDAO" class="com.mavrick.common.dao.BasicDAOImpl">
+<!--  property name="responseGenerator" ref="responseGenerator"></property -->
+</bean>
+<bean id="messageSource"    class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <property name="basename" value="/WEB-INF/messages" />
+</bean>
+<bean id="mvkTools" class="com.mavrick.common.util.MavrickTools">
+<property name="messageSource" ref="messageSource"></property>
+</bean>
+<bean id="userAuthenticationManager" class="com.mavrick.common.auth.UserAuthenticationManager"></bean>
+<bean id="passwordUtil" class="com.mavrick.common.util.PasswordUtil">
+<property name="hashingAlgorithm" value="MD5"></property>
+</bean>
+<bean id="catalogManager" class="com.mavrick.common.catalog.CatalogManager">
+<property name="basicDAO" ref="basicDAO"></property>
+<property name="catalogClassName" value="com.mavrick.persistance.entities.Catalog"></property>
+<property name="defaultCatalogId" value="catalog1001"></property>
+</bean>
+
+<bean id="userProfileManager" class="com.mavrick.common.user.UserProfileManager">
+<property name="profileQuery" value="from User u where email="></property>
+<property name="mvkTools" ref="mvkTools"></property>
+<property name="userAuthenticationManager" ref="userAuthenticationManager"></property>
+<property name="basicDAO" ref="basicDAO"></property>
+</bean>
+
+<!--  bean id="responseGenerator" class="com.mavrick.common.json.ResponseGenerator">
+<property name="objectToEntityMap">
+
+</property>
+
+
+</bean-->
+<!-- BusinessLogic configuration ends -->
+</beans>

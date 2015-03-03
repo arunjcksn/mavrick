@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/98/trunk/Fulfillment-Web/WebContent/WEB-INF/resources
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/98/trunk/Fulfillment-Web/WebContent/WEB-INF/resources/jdbc.properties
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/98/trunk/Fulfillment-Web/WebContent/WEB-INF/resources/hibernate.cfg.xml
+END
