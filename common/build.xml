@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project name="common" basedir="." default="build">
+
+	<property environment="env" />
+	<property file="build.properties" />
+	<target name="init">
+		<echo message="Started building ${mavrick.module.name}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${mavrick.module.project.java.classes.dir}" failonerror="false" verbose="${verbose}" />
+		<delete dir="${mavrick.module.project.jar}" failonerror="false" verbose="${verbose}" />
+		<mkdir dir="${mavrick.module.project.java.classes.dir}" />
+		<mkdir dir="${mavrick.module.project.jar}" />
+	</target>
+
+	<target name="set-classpath">
+
+		<path id="mvrk.classpath">
+			<fileset dir="../maverick-dependencies/lib">
+				<include name="**/*.jar" />
+			</fileset>
+
+		</path>
+		<path id="toolspath">
+			<pathelement location="${java.home.dir}/lib/tools.jar" />
+		</path>
+	</target>
+	<target name="compile" depends="set-classpath">
+		<echo message="Compiling the sources of ${mavrick.module.name}....." append="true" />
+
+		<javac fork="true" executable="${java.home.dir}/bin/javac" compiler="modern" debug="true" source="1.6" srcdir="${mavrick.module.project.java.src.dir}" failonerror="true" destdir="${mavrick.module.project.java.classes.dir}">
+			<classpath refid="mvrk.classpath" />
+		</javac>
+		<copy todir="${mavrick.module.project.java.classes.dir}">
+			<fileset dir="${mavrick.module.project.java.src.dir}">
+				<patternset>
+					<include name="**/*.properties" />
+				</patternset>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="makejars" description="Creating jars for the commerce">
+		<jar destfile="${mavrick.module.project.jar}/common.jar" basedir="${mavrick.module.project.java.classes.dir}" update="true" />
+	</target>
+	<target name="copy">
+		<copy todir="../webstore/WebContent/WEB-INF/lib">
+			<fileset dir="${mavrick.module.project.jar}">
+				<exclude name="**/*.java" />
+				<exclude name="**/.metadata/" />
+			</fileset>
+
+		</copy>
+		<copy todir="../webstore/WebContent/WEB-INF">
+
+			<fileset dir="resources">
+				<exclude name="**/*.java" />
+				<exclude name="**/.metadata/" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="buildjars" description="builds all dependant module jars that needs to used for compiling this module">
+
+
+
+
+	</target>
+	<target name="build" depends="init,clean,buildjars,compile,makejars,copy" description="clean build for jar">
+		<echo message="Finished building ${mavrick.module.name} module" />
+	</target>
+
+</project>

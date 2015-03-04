@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/219/trunk/common/src/com/mavrick/common/json
+END
+EntityResponseGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/165/trunk/common/src/com/mavrick/common/json/EntityResponseGenerator.java
+END
+UserResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/39/trunk/common/src/com/mavrick/common/json/UserResponse.java
+END
+CatalogResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/39/trunk/common/src/com/mavrick/common/json/CatalogResponse.java
+END
+JSONResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/215/trunk/common/src/com/mavrick/common/json/JSONResponse.java
+END
+CatalogResponseGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/236/trunk/common/src/com/mavrick/common/json/CatalogResponseGenerator.java
+END
+ResponseGeneratorTools.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/219/trunk/common/src/com/mavrick/common/json/ResponseGeneratorTools.java
+END
+OrderResponseGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/213/trunk/common/src/com/mavrick/common/json/OrderResponseGenerator.java
+END
+ResponseGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/70/trunk/common/src/com/mavrick/common/json/ResponseGenerator.java
+END
+ResponseGenerationFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/74/trunk/common/src/com/mavrick/common/json/ResponseGenerationFactory.java
+END

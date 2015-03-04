@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/147/trunk/common/src/com/mavrick/common/vo/order
+END
+PriceInfoVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/PriceInfoVO.java
+END
+SlotDisplayVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/SlotDisplayVO.java
+END
+OrderDeliveryDetailsVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/OrderDeliveryDetailsVO.java
+END
+CommerceItemVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/138/trunk/common/src/com/mavrick/common/vo/order/CommerceItemVO.java
+END
+OrderVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/147/trunk/common/src/com/mavrick/common/vo/order/OrderVO.java
+END
+OrderShipAddressVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/OrderShipAddressVO.java
+END
+OrderPaymentDetailVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/OrderPaymentDetailVO.java
+END
+OrderAuthStatusVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/OrderAuthStatusVO.java
+END
+OrderPaymentVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/common/vo/order/OrderPaymentVO.java
+END

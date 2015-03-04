@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/234/trunk/common/src/com/mavrick/common/vo
+END
+MediaVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/206/trunk/common/src/com/mavrick/common/vo/MediaVO.java
+END
+MaverickVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/173/trunk/common/src/com/mavrick/common/vo/MaverickVO.java
+END
+ProductVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/234/trunk/common/src/com/mavrick/common/vo/ProductVO.java
+END
+CategoryVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/233/trunk/common/src/com/mavrick/common/vo/CategoryVO.java
+END
+SkuVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/233/trunk/common/src/com/mavrick/common/vo/SkuVO.java
+END
+CatalogVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/233/trunk/common/src/com/mavrick/common/vo/CatalogVO.java
+END

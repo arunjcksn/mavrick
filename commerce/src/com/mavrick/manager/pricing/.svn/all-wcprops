@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/141/trunk/commerce/src/com/mavrick/manager/pricing
+END
+ShippingEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/141/trunk/commerce/src/com/mavrick/manager/pricing/ShippingEngine.java
+END
+PricingType.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/127/trunk/commerce/src/com/mavrick/manager/pricing/PricingType.java
+END
+PricingEngineService.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/138/trunk/commerce/src/com/mavrick/manager/pricing/PricingEngineService.java
+END
+TaxPricingEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/141/trunk/commerce/src/com/mavrick/manager/pricing/TaxPricingEngine.java
+END
+OrderPricingEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/141/trunk/commerce/src/com/mavrick/manager/pricing/OrderPricingEngine.java
+END
+PricingEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/127/trunk/commerce/src/com/mavrick/manager/pricing/PricingEngine.java
+END
+OrderPricingManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/86/trunk/commerce/src/com/mavrick/manager/pricing/OrderPricingManager.java
+END
+ItemPricingEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/141/trunk/commerce/src/com/mavrick/manager/pricing/ItemPricingEngine.java
+END

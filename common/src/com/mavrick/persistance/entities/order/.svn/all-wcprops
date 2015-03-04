@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/213/trunk/common/src/com/mavrick/persistance/entities/order
+END
+OrderDeliveryDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/persistance/entities/order/OrderDeliveryDetails.java
+END
+CommerceItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/213/trunk/common/src/com/mavrick/persistance/entities/order/CommerceItem.java
+END
+Order.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/213/trunk/common/src/com/mavrick/persistance/entities/order/Order.java
+END
+OrderShipAddress.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/persistance/entities/order/OrderShipAddress.java
+END
+OrderPaymentDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/persistance/entities/order/OrderPaymentDetail.java
+END
+OrderAuthStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/persistance/entities/order/OrderAuthStatus.java
+END
+OrderPayment.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/94/trunk/common/src/com/mavrick/persistance/entities/order/OrderPayment.java
+END
+PriceInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/138/trunk/common/src/com/mavrick/persistance/entities/order/PriceInfo.java
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/103/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities
+END
+FulfillmentOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentOrder.java
+END
+FulfillmentSubstitutionLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentSubstitutionLine.java
+END
+FulfillmentOrderAdjustment.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentOrderAdjustment.java
+END
+FulfillmentOrderLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentOrderLine.java
+END
+FulfillmentLoad.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/103/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentLoad.java
+END
+FulfillmentPickOrderLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentPickOrderLine.java
+END
+FulfillmentOrderDiscount.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/97/trunk/fulfillment/src/com/mavrick/fulfillment/order/entities/FulfillmentOrderDiscount.java
+END

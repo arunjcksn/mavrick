@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/6/trunk/common/resources
+END
+core-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/165/trunk/common/resources/core-servlet.xml
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/140/trunk/common/resources/ehcache.xml
+END
+common-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/233/trunk/common/resources/common-servlet.xml
+END
