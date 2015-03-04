@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lemon n Leaves</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/master.css" rel="stylesheet">
+<link href="css/media-queries.css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
+
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<script src="./js/backbone/jquery/jquery-1.7.2.min.js"></script>
+<script src="./js/backbone/underscore.js"></script>
+<script src="./js/backbone/backbone-min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="js/stacktable.js" type="text/javascript"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/scroll-to-top.js" type="text/javascript"></script>
+<script src="js/incrementor.js" type="text/javascript"></script>
+
+<script src="./models/catalogModels.js"></script>
+<script src="./models/userModels.js"></script>
+<script src="./models/orderModels.js"></script>
+<script src="./js/mvk_common.js"></script>
+<!--#include file="templates/headerUser.shtml" -->
+<!--#include file="templates/fullCartTemplate.shtml" -->
+
+<script src="./js/fullCart.js"></script>
+
+
+
+<!--#include file="header.shtml" -->
+
+<div class="row" id="cart-view-homepage">
+
+</div>
+<!--row -->
+<!-- Phone Navbar -->
+<!--#include file="menuHeader.shtml" -->
+<!-- Main frame -->
+<!-- Main frame -->
+<div class="container main-content-bg">
+  <div class="container" id="full_cart_main_view">
+    
+    </div>
+  </div>
+  <div class="btm-space"></div>
+  
+  <!--Row ends --> 
+</div>
+
+<!--/Main Content -->
+
+<!-- Footer -->
+<!--#include file="footer.shtml" -->
+
+<!-- /Footer -->
+<!-- Copyright -->
+<div class="copyright">
+  <h6>Copyright &copy; 2014 Lemon n Leaves</h6>
+</div>
+<!-- /Copyright -->
+<!-- latest jQuery, Boostrap JS and hover dropdown plugin -->
+<script>
+
+window.HomeHeadView = new HomeHeadView();
+window.FullCartView = new FullCartView();
+
+
+</script>
+
+</body>
+</html>

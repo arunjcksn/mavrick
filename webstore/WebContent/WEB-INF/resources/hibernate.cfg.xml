@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.mavrick.persistance.entities.User"></mapping>
+		<mapping class="com.mavrick.persistance.entities.Sku"></mapping>
+		<mapping class="com.mavrick.persistance.entities.Product"></mapping>
+		<mapping class="com.mavrick.persistance.entities.Catalog"></mapping>
+		<mapping class="com.mavrick.persistance.entities.Category"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.Order"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.CommerceItem"></mapping>
+		<mapping class="com.mavrick.persistance.entities.PostalCode"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.OrderAuthStatus"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.OrderDeliveryDetails"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.OrderPayment"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.OrderPaymentDetail"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.OrderShipAddress"></mapping>
+		<mapping class="com.mavrick.persistance.entities.order.PriceInfo"></mapping>
+		<mapping class="com.mavrick.persistance.entities.profile.Address"></mapping>
+		<mapping class="com.mavrick.persistance.entities.profile.UserPrimaryAddress"></mapping>
+
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,809 @@
+<script type="text/template" id="category_bread_crumb">
+
+          <li class="active"><a href="#" id="deptBrd" deptId=<%= deptId %>><%= deptName %></a></li>
+    
+</script>
+<script type="text/template" id="shelf_bread_crumb">
+
+          <li><a href="" id="deptBrdCmb" deptId=<%= deptId %>><%= deptName %></a></li>
+          <li><a href="" aisleId=<%= aisleId %>><%= aisleName %> </a></li>
+          <li class="active"><a href="#"><%= shelfName %></a></li>
+    
+</script>
+
+<script type="text/template" id="category_left_pane">
+
+          <div class="appl-sidebar">
+                <h1><%= deptModel.get('displayName')%></h1>
+<%
+var aisleCollectionForDept=new aisleCollection(deptModel.get('childCategories'), { view: this });
+	        	 var aisleCnt=0;
+	         _.each(aisleCollectionForDept.models,function(aisle) {
+var shelfDivId='shelf'+aisle.get('categoryId');
+var trioDivId='trio'+aisle.get('categoryId');
+
+var slidcalssid='slide'+aisleCnt;
+var trioclassid='tri'+aisleCnt;
+var viewclassid='view'+aisleCnt;
+%>
+                <div class=<%= slidcalssid%> aisleCnt=<%= aisleCnt%> aisleId=<%= aisle.get('categoryId')%> trioDivId=<%= trioDivId%> shelfDivId=<%= shelfDivId%>>
+                  <div class="trio-fnt" id="aisleDiv" aisleCnt=<%= aisleCnt%> aisleId=<%= aisle.get('categoryId')%> trioDivId=<%= trioDivId%> shelfDivId=<%= shelfDivId%>>
+                    <div class=<%= trioclassid%> id=<%= trioDivId%> aisleCnt=<%= aisleCnt%> aisleId=<%= aisle.get('categoryId')%> trioDivId=<%= trioDivId%> shelfDivId=<%= shelfDivId%>></div>
+                    <%= aisle.get('displayName')%></div>
+                </div>
+
+                <div class=<%= viewclassid%>  style="display: none;" id=<%= shelfDivId%>>
+<% var shelfCollectionForAisle=new shelfCollection(aisle.get('childCategories'), { view: this });
+		         _.each(shelfCollectionForAisle.models,function(shelf) {  %>
+                  <p id="shelf" shelf_id=<%= shelf.get('categoryId') %> display_name=<%= shelf.get('displayName') %> aisleId=<%= aisle.get('categoryId')%> aisleName=<%= aisle.get('displayName')%> deptId=<%= deptModel.get('categoryId')%> deptName=<%= deptModel.get('displayName')%>><%= shelf.get('displayName') %></p>
+<% }) %>
+                </div>
+
+                <div class="clearfix"></div>
+                <% aisleCnt=aisleCnt+1;
+}) %>
+              </div>
+      			
+              <div class="catagories">
+        <section class="accordion" id="accordion2">
+         
+          
+          <div class="accordion-group">
+            <div class="accordion-heading"><h4> Brand <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapsebrand">
+               <img src="img/plus-sign.png" alt="plus-sign" class="align-img" onclick="changeImage(this)"></a></h4>
+               </div>
+            <div id="collapsebrand" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 1</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 2</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">  <h4> Loreum ipsum<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseipsum">
+              <img src="img/plus-sign.png" alt="plus-sign" class="align-img" onclick="changeImage(this)"></a> </h4>
+              </div>
+            <div id="collapseipsum" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 1</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 2</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+       
+        </section>
+      </div>
+    
+</script>
+
+<script type="text/template" id="shelf_left_pane">
+<div class="catagories">
+        <section class="accordion" id="accordion2">
+          <div class="accordion-group top-bdr">
+            <div class="accordion-heading"> <h4> Brand <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSavings">
+              <img src="img/plus-sign.png" alt="plus-sign" class="align-img" onclick="changeImage(this)"></a></h4>
+               </div>
+            <div id="collapseSavings" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 1</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 2</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading"><h4> Customer rating <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapserating">
+               <img src="img/plus-sign.png" alt="plus-sign" class="align-img" onclick="changeImage(this)"></a> </h4>
+              </div>
+            <div id="collapserating" class="accordion-body collapse" style="height: 0px;">
+              <div class="accordion-inner">
+                <ul>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 1</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 2</li>
+                  <li><img src="img/check-box.png" class="align-inner-img" onclick="selectImage(this)" alt="check box">Category 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+         
+        </section>
+      </div>
+</script>
+
+
+<script type="text/template" id="category_view_main">
+ 	<div class="shipping-img"></div>
+             <div class="row">
+             <div class="banner-slide">
+                <div id="carousel-example" class="carousel slide" data-ride="carousel"> 
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-example" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example" data-slide-to="2" class="active"></li>
+                  </ol>
+                  
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item"> <img src="img/banner.png" alt="banner" class="full-wid"> </div>
+                    <div class="item"> <img src="img/banner.png" alt="banner" class="full-wid"> </div>
+                    <div class="item active"> <img src="img/banner.png" alt="banner" class="full-wid"> </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+        <h2><span class="green-bdr">Today's Offers</span></h2><br>
+          <div class="pad-mb-40"></div>
+        <div id="carousel-2" class="carousel slide product-scroll" data-ride="carousel"> 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="item active">
+                <ul class="thumbnails">
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/surf.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/rice.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/capcicum.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/dairy-milk.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Slide1 ends -->
+            <div class="item">
+              <ul class="thumbnails">
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/vessels.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/bag.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/haagen.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/taj.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Slide2 ends --> 
+          </div>
+          <!-- Controls --> 
+          <a class="left carousel-control" href="#carousel-2" role="button" data-slide="prev"> <img src="img/arrow-left.png" alt="left arrow"> </a> <a class="right carousel-control" href="#carousel-2" role="button" data-slide="next"> <img src="img/arrow-right.png" alt="left arrow"> </a> </div>
+      </div>
+      <div class="row">
+        <h2><span class="green-bdr">Today's Offers</span></h2><br>
+          <div class="pad-mb-40"></div>
+        <div id="carousel-3" class="carousel slide product-scroll" data-ride="carousel"> 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="item active">
+                <ul class="thumbnails">
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/surf.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/rice.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/capcicum.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/dairy-milk.png" alt=""></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                        <li><img src="img/star.png" alt=""></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Slide1 ends -->
+            <div class="item">
+              <ul class="thumbnails">
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/vessels.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/bag.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/haagen.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/taj.png" alt=""></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Slide2 ends --> 
+          </div>
+          <!-- Controls --> 
+          <a class="left carousel-control" href="#carousel-3" role="button" data-slide="prev"> <img src="img/arrow-left.png" alt="left arrow"> </a> <a class="right carousel-control" href="#carousel-3" role="button" data-slide="next"> <img src="img/arrow-right.png" alt="left arrow"> </a> </div>
+      </div>
+            
+        </div>
+    	
+    
+
+
+</script>
+
+<script type="text/template" id="product_listing_shelf">
+<div class="right-content">
+       	 <h2><span class="green-bdr">Bar fridges, Wine cellars &amp; Coolers</span></h2>
+         <div class="banner-filter">
+         	<ul class="menu-bar">
+            	<li><strong>SORT BY:</strong></li>
+            	<li><a href="" title="Newest" class="active">Newest</a></li>
+                <li><a href="" title="Rating">Rating</a></li>
+                <li><a href="" title="Price">Price</a></li>
+                <li><a href="" title="Popular">Popular</a></li>
+                <li class="number">01 - 22 of 22 items</li>
+          	</ul>
+         </div>
+<div class="newest-list">
+         <% _.each(products,function(product,key) { 
+ if ((key % 4) == 0 && key!=0) {%>
+<div class="row products">
+<%
+} else if (key==0) {
+%>
+</div>
+<div class="row products">
+<%
+}
+%>
+         
+         	
+            	<div class="col-md-3">
+                	<img src="img/cooler.png" alt="cooler">
+                    <h5><%= product.get('productName') %></h5>
+                    <p><%= product.get('productDescription') %></p>
+                   
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ <%= product.get('offerPrice') %> </span>
+                    <h4>was <span class="strike">$<%= product.get('basePrice') %></span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id=<%= product.get('skuId') %>>Add to Cart</button>
+                    
+                </div>
+                <% }) %>
+</div>
+             </div>
+            
+             <div class="row products  green-bdr-btm">
+            	
+             </div>
+         </div>
+         
+         <div class="bottom-nav">
+         <div class="row">
+         <div class="col-md-4">
+         <a class="btn btn-default button-top" href="#top">Back to top &nbsp;&nbsp;<img src="img/back-to-top.png" alt="arrow up"></a>
+         </div>
+          <div class="col-md-4">
+          	<p class="cntr-button"><a class="btn btn-default button-yellow"> Next 60 items</a></p>
+         </div>
+          <div class="col-md-4">
+       	 <a class="btn btn-default button-selection"> &nbsp;&nbsp; 1 - 60 &nbsp;&nbsp; <img src="img/selection-button.png" alt="arrow up"></a>
+          </div>
+         </div>
+
+        </div><!-- right content ends -->
+  </div>
+</script>
+
+
+<script type="text/template" id="product_listing_shelf_1">
+<div class="right-content">
+       	 <h2><span class="green-bdr">Bar fridges, Wine cellars &amp; Coolers</span></h2>
+         <div class="banner-filter">
+         	<ul class="menu-bar">
+            	<li><strong>SORT BY:</strong></li>
+            	<li><a href="" title="Newest" class="active">Newest</a></li>
+                <li><a href="" title="Rating">Rating</a></li>
+                <li><a href="" title="Price">Price</a></li>
+                <li><a href="" title="Popular">Popular</a></li>
+                <li class="number">01 - 22 of 22 items</li>
+          	</ul>
+         </div>
+         
+         <div class="newest-list">
+         	<div class="row products">
+            	<div class="col-md-3">
+                	<img src="img/cooler.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    
+                </div>
+                <div class="col-md-3">
+                	<img src="img/bbar1.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                </div>
+                <div class="col-md-3">
+                	<img src="img/fridge.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+                 <div class="col-md-3">
+                	<img src="img/fridge-mini.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+             </div>
+             <div class="row products">
+            	<div class="col-md-3">
+                	<img src="img/fridge-slim.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    
+                </div>
+                <div class="col-md-3">
+                	<img src="img/usha-cooler.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                </div>
+                <div class="col-md-3">
+                	<img src="img/fridge.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+                 <div class="col-md-3">
+                	<img src="img/fridge-mini.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+             </div>
+             <div class="row products  green-bdr-btm">
+            	<div class="col-md-3">
+                	<img src="img/cooler.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                    
+                </div>
+                <div class="col-md-3">
+                	<img src="img/bbar1.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red" id="AddToCart" sku_id="1000">Add to Cart</button>
+                </div>
+                <div class="col-md-3">
+                	<img src="img/fridge.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+                 <div class="col-md-3">
+                	<img src="img/fridge-mini.png" alt="cooler">
+                    <h5>Cooler</h5>
+                    <p>Cooler Description, price, review and rating goes here</p>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/star.png" alt=""></li>
+                      <li><img src="img/empty-star.png" alt=""></li>
+                    </ul>
+                    <h6>10 Reviews</h6>
+                    <span class="clr">$ 765 </span>
+                    <h4>was <span class="strike">$965</span></h4>
+                    <img src="img/in-stock1.png" alt="In Stock"><br>
+                    <img src="img/not-in-stock1.png" alt="In Stock">
+                    <br><button type="submit" class="btn btn-default button-red-disabled" disabled="disabled">Add to Cart</button>
+                </div>
+             </div>
+         </div>
+         
+         <div class="bottom-nav">
+         <div class="row">
+         <div class="col-md-4">
+         <a class="btn btn-default button-top" href="#top">Back to top &nbsp;&nbsp;<img src="img/back-to-top.png" alt="arrow up"></a>
+         </div>
+          <div class="col-md-4">
+          	<p class="cntr-button"><a class="btn btn-default button-yellow"> Next 60 items</a></p>
+         </div>
+          <div class="col-md-4">
+       	 <a class="btn btn-default button-selection"> &nbsp;&nbsp; 1 - 60 &nbsp;&nbsp; <img src="img/selection-button.png" alt="arrow up"></a>
+          </div>
+         </div>
+
+        </div><!-- right content ends -->
+  </div>
+</script>
+

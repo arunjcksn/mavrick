@@ -1,0 +1,128 @@
+<script type="text/template" id="category-list-template">
+<ul class="nav navbar-nav">
+<% _.each(categories,function(category) { %>
+ <li><a href="#" title="#">
+
+
+
+<%= category.get('displayName') %>
+
+</a></li> 
+
+ <% })%> 
+</ul>
+</script>
+
+<script type="text/template" id="category-desktop-list-template">
+ <ul class="nav navbar-nav">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle js-activated"><img src="img/navigation.png" alt="Navigation icon" class="glyphicon-align-center"> SHOP ALL DEPARTMENTS</a>
+              <ul class="dropdown-menu">
+<% _.each(categories,function(category) { %>
+                <li class="dropdown-submenu"><a href="#"><%= category.get('displayName') %></a>
+                  <ul class="dropdown-menu desk-nav">
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                 <% })%> 
+              </ul>
+            </li>
+          </ul>
+</script>
+
+<script type="text/template" id="main_content_template">
+<div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="cnt-bg">
+          <div class="row">
+            <div class="col-md-6 side-bdr">
+              <h5>Sign in to your account</h5>
+              <form role="form" class="form-style">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <p><a href="#" id="forgotPassword"> &gt; Forgot password ?</a></p>
+                <button type="submit" class="btn btn-default button-red" id="loginButton">Sign in</button>
+              </form>
+            </div>
+            <div class="col-md-6 pad-lft">
+              <h5>Create an account</h5>
+              <div class="create">
+                <p>Dont have an account,create one  to track your order.View your purchase and more.it is easy and free.</p>
+              </div>
+              <a class="btn btn-default button-red" href="#" id="createAccountButton">Create my Account</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+</script>
+
+<script type="text/template" id="forgot_passw_content_template">
+<ol class="breadcrumb">
+      <li><a href="#">My account</a></li>
+      <li class="active"><a href="order-details.html">Forgot your password?</a></li>
+    </ol>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="cnt-bg">
+          <div class="row">
+            <div class="col-md-12">
+              <h5>Forgot your password?</h5>
+              <form role="form" class="form-style">
+                <p>Please fill out the form below and click reset my pasword we'll email you a new temporary password</p>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address <span class="red">*</span></label>
+                  <input type="email" class="form-control" id="emailForForgotPassw" placeholder="Enter email">
+                </div>
+                <button type="submit" class="btn btn-default button-red btn-pad-50" id="resetPassword">Reset my Password</button>
+                <p><span class="underline">Forgot your email?</span><br>
+                  If you can't remember the email you use to log in, you'll<br>
+                  Have to <a href="#" id="createAccountButton"><span class="underline">Create a new account</span></a> </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7"></div>
+    </div>
+</script>
+
+

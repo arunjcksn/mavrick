@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<project name="Mavrick" basedir="." default="build">
+	<property environment="env"/>
+	<property file="build.properties" />
+	<target name="build" depends="clean,buildjars,buildwar,copywar" description="clean build for jar">
+		<echo message="Finished building ${mavrick.module.name} module" />
+	</target>
+	<target name="tomcat-start">
+		<java jar="${maverick.tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${maverick.tomcat.home}"/>
+			<arg line="start"/>
+		</java>
+	</target>
+
+	<target name="tomcat-stop">
+		<java jar="${maverick.tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${maverick.tomcat.home}"/>
+			<arg line="stop"/>
+		</java>
+	</target>
+	<target name="clean">
+
+		<delete dir="${mavrick.module.project.jar}" failonerror="false" verbose="${verbose}" />
+		<delete dir="${maverick.tomcat.deploy.dir}/${maverick.module.war.name}" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.tomcat.deploy.dir}/${maverick.module.war.name}.war" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.servlet.config}/core-servlet.xml" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.servlet.config}/commerce-servlet.xml" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.servlet.config}/common-servlet.xml" failonerror="false" verbose="${verbose}" />
+
+		<mkdir dir="${mavrick.module.project.jar}" />
+	</target>
+	<target name="buildjars" description="builds all dependant module jars that needs to used for compiling this module">
+		<ant dir="../common" target="build" inheritAll="false" inheritRefs="false" />
+				<ant dir="../commerce" target="build" inheritAll="false" inheritRefs="false" />
+
+
+	</target>
+
+	<target name="buildwar" description="building final war file to deploy in tomcat">
+		
+		<replace file="${web.dir}/WEB-INF/resources/jdbc.properties">
+		<replacefilter token="@webroot@" value="${maverick.tomcat.deploy.dir}/${maverick.module.war.name}"/>
+		</replace>
+		
+		<war destfile="${mavrick.module.project.jar}/lemon.war" webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}">
+				<include name="**/*.*"/>
+			</fileset>
+			<lib dir="../maverick-dependencies/lib">
+				<exclude name="servlet-api.jar"/>
+			</lib>
+			
+		</war>
+		<delete file="${maverick.servlet.config}/core-servlet.xml" failonerror="false" verbose="${verbose}" />
+        <delete file="${maverick.servlet.config}/commerce-servlet.xml" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.servlet.config}/common-servlet.xml" failonerror="false" verbose="${verbose}" />
+		<delete file="${maverick.servlet.config}/ehcache.xml" failonerror="false" verbose="${verbose}" />
+				
+
+	</target>
+
+	<target name="copywar">
+		<copy todir='${maverick.tomcat.deploy.dir}' file='${mavrick.module.project.jar}/${maverick.module.war.name}.war'/>
+	</target>
+</project>

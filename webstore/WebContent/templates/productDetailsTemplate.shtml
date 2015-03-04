@@ -1,0 +1,357 @@
+
+<script type="text/template" id="product_details_template">
+
+<%
+ var skuData = _.find(productdetails.skuVOs, function(sku){ return 1;}); 
+ var showOfferPrice = function(){return skuData.salesValue>skuData.offerPrice ? true : false;};
+ %>
+
+
+  <div class="ul-style">
+    <div class="row">
+      <ol class="breadcrumb frgt-ht">
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Cameras & Camcorders</a></li>
+        <li><a href="#">Cameras</a></li>
+        <li class="active"><a href="#"><%=skuData.displayName%></a></li>
+      </ol>
+      <div class="pad-btm-40"></div>
+      <div class="col-md-5">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner bdr">
+            <div class="item active"> <a class="btn" data-toggle="modal" data-target="#myModal1"> <img src="<%=skuData.image%>" class="img-responsive" alt="large-camera"></a> </div>
+            <div class="item"> <a class="btn" data-toggle="modal" data-target="#myModal2"> <img src="img/large/camera1-lg.png" class="img-responsive" alt="large-camera"></a></div>
+            <div class="item"> <a class="btn" data-toggle="modal" data-target="#myModal3"> <img src="img/large/camera-lg.png" class="img-responsive" alt="large-camera"></a></div>
+          </div>
+          <ul class="nav nav-pills nav-justified bg">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#"><img src="<%=skuData.thumbnail%>" class="img-responsive" alt="small-camera"></a></li>
+            <li data-target="#myCarousel" data-slide-to="1"><a href="#"><img src="img/small/camera1-sm.png" class="img-responsive" alt="small-camera"></a></li>
+            <li data-target="#myCarousel" data-slide-to="2"><a href="#"><img src="img/small/camera-sm.png" class="img-responsive" alt="small-camera"></a></li>
+          </ul>
+        </div>
+        <!-- Modal Popup1 -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              <div class="modal-body"> <img src="img/large/camera-lg.png" class="img-responsive" alt="large-camera"> </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Popup1 ends--> 
+        <!-- Modal Popup2 -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              <div class="modal-body"> <img src="img/large/camera1-lg.png" class="img-responsive" alt="large-camera"> </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Popup2 ends--> 
+        <!-- Modal Popup3-->
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              <div class="modal-body"> <img src="img/large/camera-lg.png" class="img-responsive" alt="large-camera"> </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Popup3 ends--> 
+      </div>
+      <!-- End Carousel --> 
+      <!--col-md-5 ends -->
+      
+      <div class="col-md-7">
+        <div class="right-section">
+          <h2><span class="green-bdr"><%= skuData.displayName%></span></h2>
+          <h4><%= skuData.displayName%></h4>
+          <p>Lorem ipsum dolor sit amet, consectetu...</p>
+          <ul class="stars">
+            <li><img src="img/star.png" alt="star"></li>
+            <li><img src="img/star.png" alt="star"></li>
+            <li><img src="img/star.png" alt="star"></li>
+            <li><img src="img/star.png" alt="star"></li>
+            <li><img src="img/empty-star.png" alt="empty-star"></li>
+            <li><span class="review">&gt;10 review</span></li>
+          </ul>
+          <h5><span class="clr">Quantity:</span></h5>
+          <div class="form-section">
+            <form class="form-section">
+              <button type="button" onclick="changeincr4(this.value)" class="btn button-incr" value="prev"><img src="img/minus-sign.png" alt="minus icon"></button>
+              <input type="text" value="01" id="incr4">
+              <button type="button" onclick="changeincr4(this.value)" class="btn button-incr" value="next"><img src="img/plus-sign.png" alt="plus icon"></button>
+            </form>
+          </div>
+          <hr>
+          <div class="purchase-section">
+            <div class="row">
+             
+              	<% if (showOfferPrice) {%>
+              	 <div class="col-md-4"> <span class="purchase-section-clr">$<sub><%=skuData.offerPrice%></sub><span class="grey">53</span> </span><br>	
+                <p class="pur-review">was  <span class="strike">$<%=skuData.salesValue%></span></p>
+                <br>
+                <%} else { %>
+              	 <div class="col-md-4"> <span class="purchase-section-clr">$<sub><%=skuData.salesValue%></sub><span class="grey">53</span> </span><br>	
+                <br>
+
+                <%}%>
+                <button type="button" id="addtocart" sku_id=<%=skuData.skuId%> class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-8">
+                <ul>
+                  <li><img src="img/tick.png" alt="tick icon"> In Stock</li>
+                  <li><img src="img/marker.png" alt="tick icon"> See estimated delivery date</li>
+                  <li><img src="img/marker.png" alt="tick icon"> $569.98 at select stores nearest LSN</li>
+                  <li><img src="img/marker.png" alt="tick icon"> Lorem ipsum dolor sit amet, consect etur adipiscing elit. Nulla</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="mini-scroll">
+            <h2><span class="green-bdr">Canon Rebel T3i IS 18-55mm</span></h2><br>
+
+            <div class="pad-mb-40"></div>
+            <div id="carousel-example" class="carousel slide" data-ride="carousel"> 
+              
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="row">
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                  </div>
+                  <!--/row--> 
+                </div>
+                <!--/item-->
+                <div class="item">
+                  <div class="row">
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                    <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/camera.png" alt="camera" class="img-responsive"></a> </div>
+                  </div>
+                  <!--/row--> 
+                </div>
+                <!--/item--> 
+              </div>
+              
+              <!-- Controls --> 
+              <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev"> <img src="img/arrow-left-grey.png" alt="left grey arrow"> </a> <a class="right carousel-control" href="#carousel-example" role="button" data-slide="next"> <img src="img/arrow-right-grey.png" alt="right grey arrow"> </a> </div>
+          </div>
+          <!--/right section --> 
+        </div>
+      </div>
+      <!--col-md-7 ends --> 
+      
+    </div>
+    <!--1st row ends --> 
+  </div>
+  <!--ul style -->
+  <div class="row">
+    <div class="desc-section">
+      <h2>Description &amp; Features</h2>
+      <div class="col-md-6">
+        <%=skuData.packagingDescription%>
+      </div>
+      <div class="col-md-6">
+        <h5>Features</h5>
+        <%=skuData.productDescription%>
+      </div>
+    </div>
+  </div>
+  <!--second row ends --> 
+  <div class="pad-btm-40"></div>
+  <div class="row">
+  	<div class="spec-section">
+    <h2>Specifications</h2>
+    		<%=skuData.additionalInfo%>
+
+	</div>
+  
+  
+  </div> <!--third row ends --> 
+  <div class="pad-btm-40"></div>
+  
+  <div class="row">	
+        
+        <div class="pad-btm-40"></div>
+        <h2>People who viewed this item also viewed</h2><br>
+
+        <div class="pad-mb-40"></div>
+        <div id="carousel-3" class="carousel slide product-scroll" data-ride="carousel"> 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item">
+              <div class="item">
+                <ul class="thumbnails">
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/surf.png" alt="surf"></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/rice.png" alt="rice"></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/capcicum.png" alt="capcicum"></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                    </div>
+                  </li>
+                  <li class="col-md-3 mobile-display">
+                    <div class="thumbnail"> <a href="#"><img src="img/products/dairy-milk.png" alt="dairy milk"></a> </div>
+                    <div class="caption">
+                      <h3>Lorem Ipsum</h3>
+                      <p class="desc">Lorem Ipsum is simply dummy text </p>
+                      <h4>Lorem Ipsum</h4>
+                      <ul class="stars">
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                        <li><img src="img/star.png" alt="star"></li>
+                      </ul>
+                      <p class="price">$315</p>
+                      <p class="discount">was  <span class="strike">$315</span></p>
+                      <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Slide1 ends -->
+            <div class="item active">
+              <ul class="thumbnails">
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/vessels.png" alt="vessels"></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/bag.png" alt="bag"></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/haagen.png" alt="haagen"></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                  </div>
+                </li>
+                <li class="col-md-3 mobile-display">
+                  <div class="thumbnail"> <a href="#"><img src="img/products/taj.png" alt="taj"></a> </div>
+                  <div class="caption">
+                    <h3>Lorem Ipsum</h3>
+                    <p class="desc">Lorem Ipsum is simply dummy text </p>
+                    <h4>Lorem Ipsum</h4>
+                    <ul class="stars">
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                      <li><img src="img/star.png" alt="star"></li>
+                    </ul>
+                    <p class="price">$315</p>
+                    <p class="discount">was  <span class="strike">$315</span></p>
+                    <button type="button" class="btn btn-default button-red">Add to Cart</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Slide2 ends --> 
+          </div>
+          <!-- Controls --> 
+          <a class="left carousel-control" href="#carousel-3" role="button" data-slide="prev"> <img src="img/arrow-left.png" alt="left arrow"> </a> <a class="right carousel-control" href="#carousel-3" role="button" data-slide="next"> <img src="img/arrow-right.png" alt="left arrow"> </a> </div>
+      </div>
+  
+
+  </script>

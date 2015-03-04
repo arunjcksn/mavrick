@@ -1,0 +1,11 @@
+<header>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-12" id="userheader">
+        
+      </div>
+    </div>
+    <!-- Header row ends --> 
+  </div>
+  <!-- header container ends --> 
+</header>

@@ -1,0 +1,43 @@
+<div class="navbar navbar-inverse" id="category_main_div">
+  <div class="container wid">
+    <!-- Visible Phone section starts-->
+    <div class="visible-xs">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-header">
+          <div class="cart">
+            <div class="input-group"> <span class="input-group-addon glyphicon glyphicon-search"></span>
+              <input type="text" class="form-control" value="Search for brand, product and category">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button" title="Search">Search</button>
+              </span> </div>
+            <!-- /input-group -->
+          </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <img title="Menu" alt="mobile-navigation" src="img/navigation.png"> SHOP ALL DEPARTMENTS</button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="categorydiv">
+
+        </div>
+      </nav>
+    </div>
+    <!-- Visible Desktop section starts-->
+    <div class="container">
+      <div class="frame" id="fixed-nav">
+        <div class="cart">
+          <div class="input-group"> <span class="input-group-addon glyphicon glyphicon-search"></span>
+            <input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Search for brand, product and category':this.value;" name="Search" id="Search" class="form-control" value="Search for brand, product and category">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" title="Search">Search</button>
+            </span> </div>
+          <!-- /input-group -->
+        </div>
+        <div class="navbar-collapse nav-collapse collapse navbar-header" id="category_div_desktop">
+
+        </div>
+        <!-- .nav-collapse -->
+        <!-- Visible Desktop section starts-->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- .navbar -->
+  </div>
+</div>

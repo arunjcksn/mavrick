@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/132/trunk/webstore/WebContent/models
+END
+userModels.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/132/trunk/webstore/WebContent/models/userModels.js
+END
+catalogModels.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/132/trunk/webstore/WebContent/models/catalogModels.js
+END
+productModels.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/209/trunk/webstore/WebContent/models/productModels.js
+END
+orderModels.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/186/trunk/webstore/WebContent/models/orderModels.js
+END

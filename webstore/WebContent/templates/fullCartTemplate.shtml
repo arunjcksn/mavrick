@@ -1,0 +1,81 @@
+
+
+
+<script type="text/template" id="full_cart_view_main_template">
+<div class="row ul-style">
+      <h1>Shopping Cart</h1>
+      <br>
+      <div class="col-md-8 pad-10">
+        <h2 class="grn-bdr-sm-bg">1 item </h2>
+<% _.each(commerceItems,function(commerceItem) { %>
+        <div class="row">
+          <div class="col-md-3"> <img src="img/camera.png" alt="Camera" class="img-responsive"> </div>
+          <div class="col-md-3"><br>
+            <p class="red">Quantity:</p>
+            <br>
+            <button type="button" onclick="changeincr4(this.value)" class="btn button-incr" value="prev"><img src="img/minus-sign.png" alt="minus icon"></button>
+            <input type="text" value=<%= commerceItem.get('qty') %>  class="incr-wid" id="incr4">
+            <button type="button" class="btn button-incr" value="next"><img src="img/plus-sign.png" alt="plus icon" id="AddToCart" sku_id=<%= commerceItem.get('skuId') %>></button><br><br>
+
+
+            <button type="button" class="btn btn-default button-remove"><img src="img/remove-icon.png" alt="remove icon" class="base"> Remove</button>
+          </div>
+          <div class="col-md-6">
+            <div class="aln-rgt">
+              <p class="gry">Reversible Connect-A-Mat™.24"x</p>
+              <p><span class="red">$<sub><%= cartTotal %></sub> </span></p>
+              <p class="grn">In stock check <a href="" title="delivery date">delivery date</a></p>
+              <p class="gry">This item qualifies for <a href="" title="delivery date">free shipping</a></p>
+            </div>
+          </div>
+        </div>
+        <br>
+<% }) %>   
+        <div class="line-brk"></div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-8" id="full_cart_bill_summary_1">
+           
+          </div>
+        </div>
+      </div>
+      <div class="pad-mb-40"></div>
+      <div class="col-md-4">
+        <div class="bg-sm" id="full_cart_bill_summary_2">
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-ht cards-accepted">
+              <h2 class="grn-bdr-sm-bg">Accepted payment methods</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+</script>
+
+<script type="text/template" id="full_cart_view_bill_summary_template_1">
+ <ul>
+              <li>SubTotal: <span class="order-value"><%= cartTotal %></span></li>
+              <li>Eco Handling fees <span class="order-value clr">40.00</span></li>
+              <li>Shipping to C1A1E9 <span class="order-value">Free</span></li>
+              <li><br>
+              </li>
+              <li>Estimated Cart Total: <span class="order-value clr1">$<sub><%= cartTotal %></sub> </span></li>
+              <li><br>
+              </li>
+              <li class="fl-rt"><span><img src="img/norton-secured.png" alt="norton secure"></span>
+                <button type="submit" class="btn btn-default button-red btn-pad-50" id="secureCheckout">Check Out</button>
+              </li>
+            </ul>
+</script>
+
+<script type="text/template" id="full_cart_view_bill_summary_template_2">
+<h2 class="grn-bdr-sm-bg">Your shopping Cart</h2>
+          <ul class="ln-ht">
+            <li>SubTotal: <span class="order-value"><%= cartTotal %></span></li>
+            <li>Standard shipping to LIV NH 7: <span class="order-value clr">Free</span></li>
+            <li>HST: <span class="order-value">1.56</span></li>
+            <li>Order Total: <span class="order-value clr1">$<sub><%= cartTotal %> </sub></span></li>
+          </ul>
+</script>

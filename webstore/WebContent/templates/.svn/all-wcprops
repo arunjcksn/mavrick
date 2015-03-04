@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/136/trunk/webstore/WebContent/templates
+END
+loginTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/193/trunk/webstore/WebContent/templates/loginTemplate.shtml
+END
+persSettingsTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/205/trunk/webstore/WebContent/templates/persSettingsTemplate.shtml
+END
+secureCheckoutTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/203/trunk/webstore/WebContent/templates/secureCheckoutTemplate.shtml
+END
+headerUser.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/210/trunk/webstore/WebContent/templates/headerUser.shtml
+END
+homePageTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/199/trunk/webstore/WebContent/templates/homePageTemplate.shtml
+END
+fullCartTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/193/trunk/webstore/WebContent/templates/fullCartTemplate.shtml
+END
+registerTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/136/trunk/webstore/WebContent/templates/registerTemplate.shtml
+END
+productDetailsTemplate.shtml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/209/trunk/webstore/WebContent/templates/productDetailsTemplate.shtml
+END

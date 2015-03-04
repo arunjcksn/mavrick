@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lemon n Leaves</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/master.css" rel="stylesheet">
+<link href="css/media-queries.css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
+
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<script src="./js/backbone/jquery/jquery-1.7.2.min.js"></script>
+<script src="./js/backbone/underscore.js"></script>
+<script src="./js/backbone/backbone-min.js"></script>
+<script src="./js/backbone/backbone.bootstrap-model.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./models/catalogModels.js"></script>
+<script src="./models/userModels.js"></script>
+<script src="./models/orderModels.js"></script>
+<script src="./js/mvk_common.js"></script>
+<script src="./js/welcomeuser.js"></script>
+<!--#include file="templates/headerUser.shtml" -->
+<!--#include file="templates/homePageTemplate.shtml" -->
+<!-- MODAL -->
+
+<div id="confirm-modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+     <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Good news!</h4>
+      </div>
+      <div class="modal-body">
+You can choose to have us deliver your order, or you can pick up your order at your local store.
+
+Register now to schedule your first order.
+<button type="submit" class="btn btn-default button-red">Create my Account</button>
+<a class="btn btn-default button-red" href="sign-in.html">Sign In</a>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  modal end -->
+<script src="./js/index.js"></script>
+<!--#include file="header.shtml" -->
+
+<div class="row" id="cart-view-homepage">
+  
+</div>
+<!--row --> 
+<!-- Phone Navbar -->
+<div class="navbar navbar-inverse">
+  <div class="container wid"> 
+    <!-- Visible Phone section starts-->
+    <div class="visible-xs">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-header">
+          <div class="cart">
+            <div class="input-group"> <span class="input-group-addon glyphicon glyphicon-search"></span>
+              <input type="text" class="form-control" value="Search for brand, product and category">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button" title="Search">Search</button>
+              </span> </div>
+            <!-- /input-group --> 
+          </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <img title="Menu" alt="mobile-navigation" src="img/navigation.png"> SHOP ALL DEPARTMENTS</button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="categorydiv">
+          
+        </div>
+      </nav>
+    </div>
+    <!-- Visible Desktop section starts-->
+    <div class="container">
+      <div class="frame" id="fixed-nav">
+        <div class="cart">
+          <div class="input-group"> <span class="input-group-addon glyphicon glyphicon-search"></span>
+            <input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Search for brand, product and category':this.value;" name="Search" id="Search" class="form-control" value="Search for brand, product and category">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" title="Search">Search</button>
+            </span> </div>
+          <!-- /input-group --> 
+        </div>
+        <div class="navbar-collapse nav-collapse collapse navbar-header" id="category_div_desktop">
+         
+        </div>
+        <!-- .nav-collapse --> 
+        <!-- Visible Desktop section starts--> 
+      </div>
+      <!-- .container --> 
+    </div>
+    <!-- .navbar --> 
+  </div>
+</div>
+<!-- Main frame -->
+<div class="container main-content-bg">
+  <div class="row">
+    <div class="col-md-3 desk-nav hidden-sm dsp-none-mb" id="category_div_desktop_1">
+      
+    </div>
+    <div class="col-md-9"> 
+      <!--Banner Section -->
+      <div class="banner" id="home_page_banner_1">  </div>
+      <!--/Banner Section --> 
+    </div>
+  </div>
+  
+  <!--Know More Content -->
+   <div class="row" id="below_category_banner">
+    
+  </div>
+  <div class="row">
+    <div class="col-md-8" id="home_page_carousel_outer">
+      <div class="row" id="carousel-example-generic">
+      </div>
+      <div class="row" id="carousel-example-generic-two">
+      </div>
+    </div>
+    <div class="col-md-4"><img src="img/side-ad.png" alt="" class="img-responsive"> <img src="img/side-ad.png" alt="" class="img-responsive"> </div>
+  </div>
+  <!--Container ends --> 
+</div>
+<!--/Main Content --> 
+
+<!-- Footer -->
+<!--#include file="footer.shtml" -->
+<!-- /Footer --> 
+<!-- Copyright -->
+<div class="copyright">
+  <h6>Copyright &copy; 2014 Lemon n Leaves</h6>
+</div>
+<!-- /Copyright --> 
+<!-- latest jQuery, Boostrap JS and hover dropdown plugin --> 
+
+<script>
+   $(document).ready(function(){
+	   $(window).bind('scroll', function() {
+	   var navHeight = $( window ).height() - 120;
+			 if ($(window).scrollTop() > navHeight) {
+				 $('#fixed-nav').addClass('fixed');
+			 }
+			 else {
+				 $('#fixed-nav').removeClass('fixed');
+			 }
+		});
+	});
+</script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.carousel').each(function(){
+        $(this).carousel({
+            pause: true,
+            interval: false
+        });
+
+    });
+});
+</script> 
+<script src="js/bootstrap-hover-dropdown.min.js"></script> 
+<script>
+    // very simple to use!
+    $(document).ready(function() {
+      $('.js-activated').dropdownHover().dropdown();
+    });
+</script> 
+<script type="text/javascript">
+$('.popover-markup > .trigger').popover({
+    html : true,
+    
+    content: function() {
+      return $(this).parent().find('.content').html();
+    },
+    container: 'body',
+    placement: 'bottom',
+	delay:
+{ show: 100, hide: 100 }
+});
+</script> 
+<script src="js/scroll-to-top.js" type="text/javascript"></script>
+<script src="js/incrementor.js" type="text/javascript"></script>
+<script> 
+
+  
+</script>
+
+
+</body>
+
+</html>

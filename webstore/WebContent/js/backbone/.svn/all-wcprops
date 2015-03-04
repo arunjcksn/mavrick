@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/183/trunk/webstore/WebContent/js/backbone
+END
+LBI.common.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/LBI.common.js
+END
+raphael-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/raphael-min.js
+END
+modernizr-2.0.6-custom.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/modernizr-2.0.6-custom.min.js
+END
+swfobject.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/swfobject.js
+END
+backbone-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/backbone-min.js
+END
+json2.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/json2.js
+END
+require-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/require-min.js
+END
+underscore.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/184/trunk/webstore/WebContent/js/backbone/underscore.js
+END

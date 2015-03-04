@@ -1,0 +1,201 @@
+<script type="text/template" id="user-list-template">
+
+
+<ul class="topnav">
+          <li><a href="" title="Help">Help</a></li>
+          <li><a href="" title="">|</a></li>
+          <li><a href="" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <a href="home.shtml" title="Lemon N Leaves" class="logo"><img src="img/lemon-n-leaves.png" alt="Lemon n Leaves" class="img-responsive pull-left"></a><br>
+<% if(!user) { %>
+        <ul class="login-section">
+          <li><a href="sign-in.shtml" title="My Account"><img src="img/login-icon.png" alt="login icon"> <br>
+            My account</a></li>
+          
+        </ul>
+<% } else { %>
+ <ul class="login-section">
+          <li><a href="personal-settings.shtml" title="My Account"><img src="img/login-icon.png" alt="login icon"> <br>
+            My account</a></li>
+          <li  id="flip-mn"><img src="img/cart-icon.png" alt="cart icon"> <br>
+            Cart | 00</li>
+        </ul>
+
+<% } %>
+
+
+
+</script>
+
+<script type="text/template" id="check_postcode_head_template">
+
+
+<ul class="topnav">
+          <li><a href="" title="Help">Help</a></li>
+          <li><a href="" title="">|</a></li>
+          <li><a href="" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <a href="#" title="Lemon N Leaves" class="logo"><img src="img/lemon-n-leaves.png" alt="Lemon n Leaves" class="img-responsive pull-left"></a><br>
+<ul class="login-section">
+          <li><a href="sign-in.shtml" title="My Account"><img src="img/login-icon.png" alt="login icon"> <br>
+            My account</a></li>
+          
+        </ul>
+
+
+</script>
+
+<script type="text/template" id="secure_checkout_head_template">
+
+
+<ul class="topnav">
+          <li><a href="" title="Help">Help</a></li>
+          <li><a href="" title="">|</a></li>
+          <li><a href="" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <a href="home.shtml" title="Lemon N Leaves" class="logo"><img src="img/lemon-n-leaves.png" alt="Lemon n Leaves" class="img-responsive pull-left"></a><br>
+
+
+
+</script>
+
+<script type="text/template" id="cart_total_template">
+<img src="img/cart-icon.png" alt="cart icon"> <br>
+            Cart | <% if(!orderPrice) { %>00<% } else { %><%= orderPrice %><%}%>
+</script>
+
+<script type="text/template" id="category-list-template">
+<ul class="nav navbar-nav">
+<% _.each(categories,function(category) { %>
+ <li><a href="#" title="#" id="department" catType="department" catId=<%= category.get('categoryId') %>>
+
+
+
+<%= category.get('displayName') %>
+
+</a></li> 
+
+ <% })%> 
+</ul>
+</script>
+
+<script type="text/template" id="category-desktop-list-template">
+ <ul class="nav navbar-nav">
+            <li class="dropdown"> <a id="mainMenuOuter" href="#" class="dropdown-toggle js-activated"><img src="img/navigation.png" alt="Navigation icon" class="glyphicon-align-center"> SHOP ALL DEPARTMENTS</a>
+              <ul class="dropdown-menu">
+<% _.each(categories,function(category) { %>
+                <li class="dropdown-submenu" id="department" catType="department" catId=<%= category.get('categoryId') %>><a href="#"><%= category.get('displayName') %></a>
+                  <ul class="dropdown-menu desk-nav">
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+						<% var aisleCollectionForDept=new aisleCollection(category.get('childCategories'), { view: this });
+	        	         _.each(aisleCollectionForDept.models,function(aisle) { %>
+                          <li><a href="/search/57/atlanta/"><%= aisle.get('displayName') %></a>
+								<div class="col-md-4">
+                       				 <ul>
+								<% var shelfCollectionForAisle=new shelfCollection(aisle.get('childCategories'), { view: this });
+	         _.each(shelfCollectionForAisle.models,function(shelf) { %>
+                          					<li><a href="/search/57/atlanta/"><%= shelf.get('displayName') %></a></li>
+								<% }) %>
+									 </ul>
+                      			</div>
+							</li>
+                          <% }) %>
+                        </ul>
+                      </div>
+                    </li>
+                   
+                  </ul>
+                </li>
+                 <% })%> 
+              </ul>
+            </li>
+          </ul>
+</script>
+
+
+<script type="text/template" id="cart_view_home_page_template">
+  <div class="container">
+    <div class="col-md-12 white-bg" id="panel-mn">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="cart-section">
+            <ul>
+              <li>My Cart</li>
+              <li><%= commerceItemCnt %> item</li>
+              <li class="edit-style"><a href="full_cart.shtml" title="View / Edit"> >View or edit cart</a></li>
+            </ul>
+          </div>
+          <div id="cart_view_outer_div" class="carousel slide" data-ride="carousel"> 
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner prod-selection">
+              <div class="item active">
+                <div class="row">
+<% _.each(commerceItems,function(commerceItem) { %>
+                  <div class="col-sm-4 mob-fix"> <a href="#" class="thumbnail"><img src="img/camera1.png" alt="Image" class="img-responsive"></a>
+                    <h2>Loreum</h2>
+                    <p>loreum ipsum is jsut a dummy text that you are seeing</p>
+                    <span class="clr">Quantity:</span>
+                    <form class="form-section">
+                      <button type="button" class="btn button-incr" value="prev"><img src="img/minus-sign.png" alt="minus icon" id="DecrementItem" sku_id=<%= commerceItem.get('skuId') %> commerce_item_id=<%= commerceItem.get('commerceItemId') %>></button>
+                      <input type="text" value=<%= commerceItem.get('qty') %> id="incr">
+                      <button type="button" class="btn button-incr" value="next"><img src="img/plus-sign.png" alt="plus icon"  id="AddToCart" sku_id=<%= commerceItem.get('skuId') %>></button>
+                    </form>
+                    <ul>
+                      <li><strong>PRICE:</strong></li>
+
+<%
+var priceObj=commerceItem.get('itemPriceInfo');
+		        var commerceItemTotal=priceObj.amount;
+%>
+                      <li><span class="clr"><%= commerceItemTotal %></span> <br>
+                        <span class="mar-lft">was <span class="strike"><%= commerceItemTotal %></span></span></li>
+                    </ul>
+                    <button type="button" class="btn btn-default button-remove" id="removeItemFromCart"  sku_id=<%= commerceItem.get('skuId') %> commerce_item_id=<%= commerceItem.get('commerceItemId') %>><img src="img/remove-icon.png" alt="remove icon" class="base" > Remove</button>
+                  </div>
+                 <% }) %>   
+                  
+                </div>
+                <!--/row--> 
+              </div>
+              <!--/item--> 
+              
+              <!--/item--> 
+            </div>
+            
+            <!-- Controls --> 
+            <a class="left carousel-control fix-l" href="#carousel-example-generic" role="button" data-slide="prev"> <img src="img/arrow-left.png" alt="left arrow"> </a> <a class="right carousel-control fix-r" href="#carousel-example-generic" role="button" data-slide="next"> <img src="img/arrow-right.png" alt="right arrow"> </a> </div>
+        </div>
+        <!-- end of col-md-6 -->
+        <div class="col-md-4" id="cart_total_summary">
+          
+        </div>
+      </div>
+    </div>
+    <!--col-md-12 --> 
+  </div>
+</script>
+
+<script type="text/template" id="cart_view_home_page_bill_summary_template">
+<div class="order-info">
+            <h2>Order Information <span class="edit-style"><a href="full_cart.shtml" title="View / Edit">Edit</a></span></h2>
+            <ul>
+              <li>SubTotal: <span class="order-value"><%= cartTotal %></span></li>
+              <li>Eco Handling fees <span class="order-value clr">40.00</span></li>
+              <li>Shipping to C1A1E9 <span class="order-value">Free</span></li>
+              <li><br>
+              </li>
+              <li>Estimated Cart Total: <span class="order-value clr1">$<sub><%= cartTotal %></sub> </span></li>
+            </ul>
+            <p class="pos"><a class="btn btn-default button-red btn-pad-50" id="secureCheckout">Check Out</a></p>
+          </div>
+</script>
+
+    <script id="modal_template" type="text/template">
+        You can choose to have us deliver your order, or you can pick up your order at your local store.
+		Register now to schedule your first order.
+		<a href="create-account.shtml" class="btn btn-default button-red">Create my Account</a>
+		  <a class="btn btn-default button-red" href="sign-in.shtml">Sign In</a>
+    </script>

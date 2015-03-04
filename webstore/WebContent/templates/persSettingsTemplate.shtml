@@ -1,0 +1,781 @@
+
+
+
+<script type="text/template" id="below_category_banner_template">
+<div class="col-md-4"><img src="img/shop-now.png" alt="" class="img-responsive"></div>
+    <div class="col-md-4"><img src="img/shop-now.png" alt="" class="img-responsive"></div>
+    <div class="col-md-4"><img src="img/shop-now.png" alt="" class="img-responsive"></div>
+</script>
+
+<script type="text/template" id="carousel-example-generic_1">
+ <div class="carousel-inner wid-80 center">
+          <div class="item active">
+            <div class="row">
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Default</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="" class="img-responsive">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><img src="img/arrow-left.png" alt=""></a> 
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><img src="img/arrow-right.png" alt=""></a>
+       
+</script>
+
+<script type="text/template" id="carousel-example-generic-2">
+ 
+        <div class="carousel-inner wid-80 center">
+          <div class="item active">
+            <div class="row">
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 col-sm-3  products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+              <div class="col-md-3 products"> <img src="img/products.png" alt="">
+                <h5>Lorem Ipsum</h5>
+                <p class="desc">Lorem Ipsum is simply dummy text </p>
+                <p class="review">Lorem Ipsum</p>
+                <ul class="stars">
+                  <li ><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                  <li><img src="img/star.png" alt="" ></li>
+                </ul>
+                <p class="price">$315</p>
+                <p class="review">Lorem <span>$315</span></p>
+                <button type="button" class="btn btn-default button-red">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+     <a class="left carousel-control" href="#carousel-example-generic-two" data-slide="prev"><img src="img/arrow-left.png" alt=""></a> 
+        <a class="right carousel-control" href="#carousel-example-generic-two" data-slide="next"><img src="img/arrow-right.png" alt=""></a>
+        
+</script>
+
+
+
+<script type="text/template" id="breadcrumb-template_persnl_settings">
+ 
+<ol class="breadcrumb" id="bredcrumb">
+       
+<li><a href="#">My account</a></li>
+        <li class="active"><a href="#" id="persSettings">Personal Settings</a></li>
+ </ol>
+      <div class="pad-btm-40"></div>
+
+
+     
+</script>
+
+<script type="text/template" id="my_account_navigation_persnl_settings">
+<ul class="nav nav-pills nav-stacked col-md-3" id="myAccountNavigation">
+       
+      
+ <li><a href="#" id="orderHistLink">Order History</a></li>
+       <li class="active"><a href="#" id="persSettings">Personal Settings</a></li>
+        <li><a href="#" id="addressLink">Address</a></li>
+   </ul>   
+</script>
+
+<script type="text/template" id="breadcrumb-template_order_history">
+<ol class="breadcrumb" id="bredcrumb">
+ <li><a href="#">My account</a></li>
+        <li class="active"><a href="#" id="orderHistLink">Order History</a></li>
+     </ol>
+      <div class="pad-btm-40"></div>
+
+
+
+</script>
+
+<script type="text/template" id="breadcrumb-template_order_history_order_details">
+<ol class="breadcrumb" id="bredcrumb">
+<li><a href="#">My account</a></li>
+        <li><a href="#" id="orderHistLink">Order History</a></li>
+        <li class="active"><a href="#">Order Details</a></li>
+ </ol>
+      <div class="pad-btm-40"></div>
+
+
+
+</script>
+
+<script type="text/template" id="my_account_navigation_order_history">
+<ul class="nav nav-pills nav-stacked col-md-3" id="myAccountNavigation">
+    
+  <li class="active"><a href="#" id="orderHistLink">Order History</a></li>
+        <li><a href="#" id="persSettings">Personal Settings</a></li>
+        <li><a href="#" id="addressLink">Address</a></li>
+     </ul>
+</script>
+
+
+
+<script type="text/template" id="breadcrumb-template_address">
+<ol class="breadcrumb" id="bredcrumb">
+ <li><a href="#">My account</a></li>
+      <li class="active"><a href="#" id="addressLink">Address</a></li>
+     </ol>
+      <div class="pad-btm-40"></div>
+
+</script>
+
+<script type="text/template" id="my_account_navigation_address">
+<ul class="nav nav-pills nav-stacked col-md-3" id="myAccountNavigation">
+    
+   <li><a href="#" id="orderHistLink">Order History</a></li>
+        <li><a href="#" id="persSettings">Personal Settings</a></li>
+        <li class="active"><a href="#" id="addressLink">Address</a></li>
+</ul>
+</script>
+
+<script type="text/template" id="breadcrumb_template_add_address">
+<ol class="breadcrumb" id="bredcrumb">
+ <li><a href="#">My account</a></li>
+        <li><a href="#" id="addressLink">Address</a></li>
+        <li class="active"><a href="#" id="addAddressLink">Add Shipping Address</a></li>
+     </ol>
+      <div class="pad-btm-40"></div>
+
+</script>
+
+
+<script type="text/template" id="breadcrumb_template_edit_address">
+<ol class="breadcrumb" id="bredcrumb">
+ <li><a href="#">My account</a></li>
+        <li><a href="#" id="addressLink">Address</a></li>
+        <li class="active"><a href="#" id="addAddressLink">Edit Shipping Address</a></li>
+     </ol>
+      <div class="pad-btm-40"></div>
+
+</script>
+
+<script type="text/template" id="my_account_persnl_settings_main">
+
+
+<div class="tab-content col-md-9">
+
+  <div class="tab-pane active" id="tab_b">
+    <div class="pad-mb-40"></div>
+    <h6>Personal Settings</h6>
+    <div class="row">
+      <div class="col-md-12">
+        <section class="accordion" id="accordion2">
+          <div class="accordion-group" id="persnlDetailsMain">
+           
+          </div>
+            <div class="accordion-group">
+                  <div class="accordion-heading">
+                      <h3 class="grn-bdr-sm-bg"> <a href="#collapseTwo" class="accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion"  > Reset Password <span class="link-style"><u>Edit</u></span></a> </h3>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
+                                         <div class="accordion-inner">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form role="form" class="form-style">
+                            <div class="form-group">
+                              <label for="current-password">current password<span>*</span></label>
+                              <input type="text" class="form-control" id="current-password" placeholder="">
+                            </div>
+                            <div class="form-group">
+                              <label for="new-password">new password<span>*</span></label>
+                              <input type="text" class="form-control" id="new-password" placeholder="">
+                            </div>
+                            <div class="form-group">
+                              <label for="confirm-password">confirm password<span>*</span></label>
+                              <input type="text" class="form-control" id="confirm-password" placeholder="">
+                            </div>
+                            <button type="submit" class="btn btn-default button-red" id="resetPassword">Save</button>
+                            <button type="submit" class="btn btn-default button-red">Cancel</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</script>
+
+<script type="text/template" id="my_account_order_history_main">
+  <div class="tab-content col-md-9">
+        <div class="tab-pane active" id="tab_a">
+          <div class="pad-mb-40"></div>
+          <h6>Order History <span class="view-style"><a href="order-details.html" title="View All Orders"> >View All Orders</a></span></h6>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="prod-table">
+                <table id="responsive-example-table" class="large-only">
+                  <tbody>
+                    <tr class="bdr">
+                      <th class="wid-15 bdr1">Order Date/Number</th>
+                      <th class="wid-12">Total Items</th>
+                      <th class="wid-15">Items from this Order</th>
+                      <th class="wid-12">Order Total</th>
+                      <th class="wid-12">Order Status</th>
+                    </tr>
+	<% _.each(orders,function(order) { %>
+            <div class="row bdr-btm">
+                    <tr>
+                      <td><p><%= order.get('orderId') %><br>
+                          <%= order.get('orderId') %><br>
+                          <a href="" title="View Order details" id="viewOrderDetail" order_id=<%= order.get('orderId') %>>View Order details</a></p></td>
+                      <td>1 Item</td>
+                      <td><img src="img/camera.png" alt="camera"></td>
+                      <td><%= order.get('orderTotal') %></td>
+                      <td><a href="" title="Order Cancelled"><%= order.get('state') %></a></td>
+                    </tr>
+<% }) %>  
+</div>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tabbed content ends--> 
+      </div>
+</script>
+
+<script type="text/template" id="my_account_address_main">
+ <div class="tab-content col-md-9">
+      
+      <div class="tab-pane active" id="tab_c">
+      <div class="pad-mb-40"></div>
+        <h6>Addresses</h6>
+        <div class="row">
+          <div class="col-md-12 address-details">
+            <h2 class="grn-bdr-sm-bg red"><a href="#" id="addAddressLink" title="Add new address">Add new address</a></h2>
+<% _.each(adresses,function(address) { %>
+            <div class="row bdr-btm">
+              <div class="col-md-6">
+                <p><%= address.get('nickName') %><br>
+                  <%= address.get('address1') %>,<br>
+                  <%= address.get('address2') %>.<br>
+                  Phasellus 560 059</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="addr-options">
+                  <li><a href="#" title="Delete" id="deleteAddress" addressId=<%= address.get('addressId') %>>Delete</a></li>
+                  <li><a> | </a></li>
+                  <li><a href="#" title="Edit" id="loadEditAddress" addressId=<%= address.get('addressId') %>>Edit</a></li>
+                </ul>
+              </div>
+            </div>
+         <% }) %>   
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+
+<script type="text/template" id="my_account_add_address_main">
+       <div class="tab-content col-md-9">
+        <div class="tab-pane active" id="tab_c">
+          <div class="pad-mb-40"></div>
+          <h6>Add Address</h6>
+          <div class="row">
+            <div class="col-md-12 address-details">
+              <h2 class="grn-bdr-sm-bg">&nbsp;</h2>
+              <div class="row">
+                <div class="col-md-6 addr-new">
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="first-name">First name<span>*</span></label>
+                      <input type="email" class="form-control" id="first_name">
+                    </div>
+                    <div class="form-group">
+                      <label for="last-name">Last name<span>*</span></label>
+                      <input type="text" class="form-control" id="last_name">
+                    </div>
+                    <div class="form-group">
+                      <label for="address-1">Address line 01<span>*</span></label>
+                      <input type="text" class="form-control" id="address_1">
+                    </div>
+                    <div class="form-group">
+                      <label for="address-2">Address line 02</label>
+                      <input type="text" class="form-control" id="address_2">
+                    </div>
+                    <div class="form-group">
+                      <label for="city">City<span>*</span></label>
+                      <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="form-group">
+                      <label for="province-territory">Province / territory<span>*</span></label>
+                      <select class="form-control input-sm" id="province-territory">
+                        <option value="">AZ</option>
+                        <option value="">TX</option>
+                        <option value="">OR</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="postal">Postal code<span>*</span></label>
+                      <input type="text" class="form-control" id="postal">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone<span>*</span></label>
+                      <input type="text" class="form-control" id="phone">
+                    </div>
+                    <button type="submit" class="btn btn-default button-red btn-pad-50" title="Save" id="addAddress">Save</button>
+                    <span class="view-style"><a href="#" title="Cancel" id="addressLink"> &gt; Cancel</a></span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</script>
+
+<script type="text/template" id="my_account_edit_address_main">
+    <div class="tab-content col-md-9">
+      
+      <div class="tab-pane active" id="tab_c">
+      <div class="pad-mb-40"></div>
+        <h6>Edit Address</h6>
+        <div class="row">
+          <div class="col-md-12 address-details">
+            <h2 class="grn-bdr-sm-bg">&nbsp;</h2>
+            <div class="row"> 
+            
+            	<div class="col-md-6 addr-new">
+                    <form role="form">
+                        <div class="form-group">
+                          <label for="first-name">First name<span>*</span></label>
+                          <input type="email" class="form-control" id="first_name_edit_address" placeholder=<%= address.get('nickName') %>>
+                        </div>
+                        <div class="form-group">
+                          <label for="last-name">Last name<span>*</span></label>
+                          <input type="text" class="form-control" id="last_name_edit_address" placeholder=<%= address.get('nickName') %>>
+                        </div>
+                          <div class="form-group">
+                          <label for="address1">Address line 01<span>*</span></label>
+                          <input type="text" class="form-control" id="address1_edit_address" placeholder=<%= address.get('address1') %>>
+                        </div>
+                          <div class="form-group">
+                          <label for="address2">Address line 02</label>
+                          <input type="text" class="form-control" id="address2_edit_address" placeholder=<%= address.get('address2') %>>
+                        </div>
+                          <div class="form-group">
+                          <label for="city">City<span>*</span></label>
+                          <input type="text" class="form-control" id="city_edit_address" placeholder=<%= address.get('city') %>>
+                        </div>
+                        <div class="form-group">
+                          <label for="province-territory">Province / Territory<span>*</span></label>
+                          <select class="form-control input-sm" id="province-territory_edit_address">
+                            <option value="">AZ</option>
+                            <option value="">TX</option>
+                            <option value="">OR</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="postal">Postal code<span>*</span></label>
+                          <input type="text" class="form-control" id="postal_edit_address" placeholder=<%= address.get('postcode') %>>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone">Phone<span>*</span></label>
+                          <input type="text" class="form-control" id="phone_edit_address" placeholder=<%= address.get('phoneNum') %>>
+                        </div>
+                        <button type="submit" class="btn btn-default button-red btn-pad-50" title="Save" id="saveEditedAddress" addressId=<%= address.get('addressId') %>>Save</button>
+                        <span class="view-style"><a href="#" title="Cancel" id="cancelEditAddress"> &gt; Cancel</a></span>
+          
+         		    </form>
+   					</div>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tabbed content ends--> 
+  </div>
+</script>
+<script type="text/template" id="my_account_order_history_order_details">
+<div class="tab-content col-md-9">
+        <div class="tab-pane active" id="tab_a">
+          <div class="pad-mb-40"></div>
+          <h6>Order Details (#690644667) <a href="javascript:window.print()" title="Print Receipt" class="btn btn-default button-red print-none">Print Receipt</a> </h6>
+          <p>Note: Once your order has shipped. It may take 24 to 48 hours for the carrier to update tracking informations</p>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="order-info">
+                <h2>Order Information</h2>
+                <ul>
+                  <li>Order Date: <span class="order-value">January 23, 2014</span></li>
+                  <li>Order Status: <span class="order-value clr">Order Cancelled</span></li>
+                  <li>Order Number: <span class="order-value">#690644667</span></li>
+                  <li>Number of Items: <span class="order-value">01</span></li>
+                  <li>Order Total: <span class="order-value clr1">$<sub>13</sub>53 </span></li>
+                  <li><br>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="order-info">
+                <h2>Shipping and Payment Information</h2>
+                <div class="row">
+                  <div class="col-md-6 side-bdr">
+                    <ul>
+                      <li><strong><strong>Ship to:</strong></strong></li>
+                      <li>John Raj</li>
+                      <li>1960 Angentila Road</li>
+                      <li>Number of Items:</li>
+                      <li>Order Total:</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul>
+                      <li><strong>Payment Info:</strong></li>
+                      <li>Visa ending in</li>
+                      <li><span class="clr">**** **** **** 4500</span></li>
+                      <li>Bill to:</li>
+                      <li>Visa Vald Card</li>
+                      <li>1940 Angentila Road</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h5>Shipment Details</h5>
+            <br>
+            <div class="prod-table">
+              <table id="responsive-example-table" class="large-only">
+                <tbody>
+                  <tr class="bdr">
+                    <th class="wid-15 bdr1">Product Image</th>
+                    <th class="wid-12">Product Name</th>
+                    <th class="wid-15">Item Price</th>
+                    <th class="wid-12">Quantity</th>
+                    <th class="wid-12">Price</th>
+                  </tr>
+                  <tr>
+                    <td><img src="img/camera.png" alt="camera"></td>
+                    <td><p>Lorem ipsum<br>
+                        #690644667</p></td>
+                    <td><span class="clr">$ 13.53</span></td>
+                    <td>QTY:1</td>
+                    <td><span class="clr">$ 13.53</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="pad-20"></div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-6 total">
+              <ul>
+                <li>Sub Total: <span class="order-value">11.97</span></li>
+                <li>Standard shipping to LIV NH 7:: <span class="order-value">Free</span></li>
+                <li>HST: <span class="order-value">1.56</span></li>
+                <li><br></li>
+                <li>Order Total: <span class="order-value clr1">$<sub>13</sub>53 </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Tabbed content ends--> 
+      </div>
+</script>
+
+<script type="text/template" id="my_account_pers_settings_view">
+
+
+ <div class="accordion-heading">
+                    <h3 class="grn-bdr-sm-bg"><a href="#collapseOne" class="accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion2">Personal Information </a><span class="link-style"><a href="#" id="editPersDetails">Edit</a></span></h3>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+                    <div class="accordion-inner">
+                      <form role="form" class="form-style">
+                        <div class="form-group">
+                          <label>Email address</label>
+                          <h5><%= user.get('email') %></h5>
+                        </div>
+                        <div class="form-group">
+                          <label>First name</label>
+                          <h5><%= user.get('firstName') %></h5>
+                        </div>
+                        <div class="form-group">
+                          <label>Last name</label>
+                          <h5><%= user.get('lastName') %></h5>
+                        </div>
+                        <div class="form-group">
+                          <label>Postal code</label>
+                          <h5>28847 8392</h5>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+
+</script>
+
+
+
+
+
+<script type="text/template" id="my_account_pers_settings_edit">
+
+ <div class="accordion-heading">
+                    <h3 class="grn-bdr-sm-bg"><a href="#collapseOne" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2">Personal Information </a><span class="link-style"><a href="#" id="editPersDetails">Edit</a></span></h3>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <form role="form" class="form-style">
+                        <div class="form-group">
+                          <label>Email address</label>
+                          <h5></h5>
+<input type="hidden" class="form-control" id="edit_id"  value =<%= user.get('id') %>>
+                          <input type="email" class="form-control" id="edit_email"  value =<%= user.get('email') %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="first-name">First name<span>*</span></label>
+                            <input type="text" class="form-control" id="edit_first-name" value =<%= user.get('firstName') %>>
+                          </div>
+                          <div class="form-group">
+                            <label for="last-name">Last name<span>*</span></label>
+                            <input type="text" class="form-control" id="edit_last-name" value =<%= user.get('lastName') %>>
+                          </div>
+                          <div class="form-group">
+                            <label for="postal">Postal code<span>*</span></label>
+                            <input type="text" class="form-control" id="edit_postal" value ="12345678">
+                          </div>
+                        <button type="submit" class="btn btn-default button-red btn-pad-50" title="Save" id="saveEditPersnlInfo">Save</button>
+                          <span class="view-style"><a href="" title="Cancel"> > Cancel</a></span>
+                      </form>
+                    </div>
+                  </div>
+                    </script>

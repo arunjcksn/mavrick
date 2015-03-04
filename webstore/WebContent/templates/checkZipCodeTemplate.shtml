@@ -1,0 +1,60 @@
+
+<script type="text/template" id="checkZipCodeTemplate">
+ <div class="container">
+    <div class="row ul-style">
+    <div class="pad-btm-40"></div>
+      <h3 class="zipcode-h3"><center>Save time and money</center></h3>
+      
+      <center><h1>while shopping online for groceries and more </h1></center>
+      
+  <div class="row zipcode-div inline "><div class="col-sm-offset-4 col-md-6 ">
+  <form role="form" class="form-inline">
+ <div class="form-group">
+    <input type="text" class="zipcode-input form-control" placeholder="Zipcode" id="zipcode">
+    <a class="btn btn-default button-red zipcode-btn" type="submit" title="Search" id="checkZip">Check Zipcode</a>
+</div>
+  </form>
+  </div>
+             </div>
+     
+  </div>
+  </div>
+</script>
+
+<script type="text/template" id="zipCodeNotAvailTemplate">
+<div class="container">
+    <div class="row ul-style">
+    <div class="pad-btm-40"></div>
+      <h3 class="zipcode-h3"><center>Sign up now!</center></h3>
+      
+      <center><h1>Lemon n Leaves Grocery Pickup or Delivery isn't currently available in 56009.</h1></center>
+      <div class="pad-btm-20"></div>
+      <center><p>Enter your email and we'll contact you when pickup or delivery is available in <%= zipCode%>.</p></center>
+      
+  <div class="row zipcode-div inline"><div class="col-sm-offset-4 col-md-6 ">
+  <form class="form-inline">
+    <input type="text" class="zipcode-input form-control" placeholder="Enter Email Address">
+    <button class="btn btn-default button-red zipcode-btn" type="button" title="Search" id="notifyMe">Notify Me !!</button>
+  </form>
+  <a class="" href="#" id="checkZipCode">Check another ZIP code</a>
+  </div>
+             </div>
+     
+  </div>
+  </div>
+  </script>
+<script type="text/template" id="emailThankyouTemplate">  
+  <div class="container">
+    <div class="row ul-style">
+    <div class="pad-btm-40"></div>
+      <h3 class="zipcode-h3"><center>Thank you!</center></h3>
+      
+      <center><h1>Keep an eye out for your invitation.</h1></center>
+      <div class="pad-btm-20"></div>
+      <center><a class="" href="#" id="checkZipCode">Check another ZIP code</a></center>
+      
+  
+     
+  </div>
+  </div>
+  </script>

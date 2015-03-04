@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/31/trunk/webstore
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/123/trunk/webstore/build.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/165/trunk/webstore/build.xml
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/7/trunk/webstore/.project
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/13/trunk/webstore/.classpath
+END

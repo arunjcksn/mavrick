@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lemon and Greens</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/master.css" rel="stylesheet">
+<link href="css/media-queries.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<script src="./js/backbone/jquery/jquery-1.7.2.min.js"></script>
+	<script src="./js/backbone/underscore.js"></script>
+	<script src="./js/backbone/backbone-min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/json2.js"></script>
+	<script src="./js/login.js"></script>
+	<script src="./js/welcomeuser.js"></script>
+<!--#include file="templates/headerUser.shtml" -->
+<!--#include file="templates/categoryTemplate.shtml" -->
+
+	<script>
+
+window.Router = Backbone.Router.extend({
+
+    routes: {
+        "": "home",
+        "login" : "login",
+        "register" : "register"
+    },
+    login: function() {
+        $('#content').html(new LoginView().render().el);
+    },
+    register: function() {
+    	window.location.replace('create-account.shtml');
+    }
+});
+
+window.LoginView = new LoginView();
+window.HomeHeadView = new HomeHeadView();
+
+window.LoginContentView = new LoginContentView();
+
+</script>
+	<!--#include file="header.shtml" -->
+	<div class="nav-bg">
+		<div class="container">
+			<img src="img/navigation.png" alt="" class="pull-left">
+			<p>Shop All Departments</p>
+			<div class="pull-right wid-100">
+				<img src="img/cart.png" alt="" class="pull-left">
+				<p>Cart | 00</p>
+			</div>
+		</div>
+	</div>
+	<div class="container main-content login-main">
+		<div class="row">
+			<div class="col-md-2"></div>
+
+			<div class="col-md-8">
+				<div class="login-container">
+					<div class="row">
+						<div class="col-md-6 side-img">
+							<div class="pad-20">
+								<h3>Sign in to your account</h3>
+								<form method="post" class="login-user-form">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Email address</label> <input
+											type="email" class="form-control" id="exampleInputEmail1"
+											placeholder="Enter email" />
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Password</label> <input
+											type="password" class="form-control"
+											id="exampleInputPassword1" placeholder="Password" />
+									</div>
+									<a href=""> forgot password</a>
+									<button type="submit" class="btn" id="loginButton">Sign
+										in</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="pad-20">
+								<h3>Create an account</h3>
+								<div class="create">
+									<p>Dont have an account,create one to track your order.View
+										your purchase and more.it is easy and free.</p>
+								</div>
+								<button type="submit" class="btn btn-default button-red" id="createAccountButton">Create
+									my Account</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row" id="below_category_banner"></div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="featured">
+					<h2>
+						<span>Today's Offers</span>
+					</h2>
+				</div>
+				<div id="carousel-example-generic" class="carousel slide"
+					data-ride="carousel"></div>
+
+				<div class="featured">
+					<h2>
+						<span>Today's Offers</span>
+					</h2>
+				</div>
+				<div id="carousel-example-generic-two" class="carousel slide"
+					data-ride="carousel"></div>
+
+			</div>
+			<div class="col-md-4">
+				<img src="img/side-ad.png" alt="" class="img-responsive"> <img
+					src="img/side-ad.png" alt="" class="img-responsive">
+			</div>
+		</div>
+	</div>
+	<!--#include file="footer.shtml" -->
+
+
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

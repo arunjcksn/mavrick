@@ -1,0 +1,68 @@
+<script type="text/template" id="category-list-template">
+<ul class="nav navbar-nav">
+<% _.each(categories,function(category) { %>
+ <li><a href="#" title="#">
+
+
+
+<%= category.get('displayName') %>
+
+</a></li> 
+
+ <% })%> 
+</ul>
+</script>
+
+<script type="text/template" id="category-desktop-list-template">
+ <ul class="nav navbar-nav">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle js-activated"><img src="img/navigation.png" alt="Navigation icon" class="glyphicon-align-center"> SHOP ALL DEPARTMENTS</a>
+              <ul class="dropdown-menu">
+<% _.each(categories,function(category) { %>
+                <li class="dropdown-submenu"><a href="#" class="marker"><%= category.get('displayName') %></a>
+                  <ul class="dropdown-menu desk-nav">
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-md-4">
+                        <ul>
+                          <li><a href="/search/57/atlanta/">atlanta</a></li>
+                          <li><a href="/search/57/austin/">austin</a></li>
+                          <li><a href="/search/57/boston/">boston</a></li>
+                          <li><a href="/search/57/chicago/">chicago</a></li>
+                          <li><a href="/search/57/seattle/">seattle</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                 <% })%> 
+              </ul>
+            </li>
+          </ul>
+</script>
+
+
+
+
+
+

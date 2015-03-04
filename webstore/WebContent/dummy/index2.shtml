@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lemon and Greens</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/master.css" rel="stylesheet">
+<link href="css/media-queries.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<script src="./js/backbone/jquery/jquery-1.7.2.min.js"></script>
+<script src="./js/backbone/underscore.js"></script>
+<script src="./js/backbone/backbone-min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/welcomeuser.js"></script>
+<!--#include file="templates/headerUser.shtml" -->
+<!--#include file="templates/categoryTemplate.shtml" -->
+
+<script src="./js/index.js"></script>
+<!--#include file="header.shtml" -->
+
+
+
+<div class="nav-bg">
+  <div class="container"><img src="img/navigation.png" alt="" class="pull-left" >
+    <p>Shop All Departments</p>
+    <div class="pull-right"> <img src="img/cart.png" alt="" class="pull-left">
+      <p>Cart | 00</p>
+    </div>
+  </div>
+</div>
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="list-group" id="categorydiv"> </div>
+    </div>
+    <div class="col-md-4 col-xs-6" id="home_page_banner_1"> </div>
+    <div class="col-md-4 col-xs-6" id="home_page_banner_2"></div>
+  </div>
+  <div class="row" id="below_category_banner">
+    
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="featured">
+        <h2><span>Today's Offers</span></h2>
+      </div>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
+      
+         </div>
+      <div class="featured">
+        <h2><span>Today's Offers</span></h2>
+      </div>
+      <div id="carousel-example-generic-two" class="carousel slide" data-ride="carousel"> 
+        
+        
+           </div>
+    </div>
+    <div class="col-md-4"><img src="img/side-ad.png" alt="" class="img-responsive"> <img src="img/side-ad.png" alt="" class="img-responsive"> </div>
+  </div>
+</div>
+<!--#include file="footer.shtml" -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

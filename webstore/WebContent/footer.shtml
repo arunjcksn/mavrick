@@ -1,0 +1,72 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Most Popular Brands</h5>
+        <ul>
+          <li><a href="" title="">ALL BRANDS</a></li>
+          <li><a href="" title="">Amul</a></li>
+          <li><a href="" title="">Haldiram's</a></li>
+          <li><a href="" title="">Tropicana</a></li>
+          <li><a href="" title="">Kelloggs</a></li>
+          <li><a href="" title="">Dettol</a></li>
+          <li><a href="" title="">MTR</a></li>
+          <li><a href="" title="">Bru</a></li>
+          <li><a href="" title="">McCain</a></li>
+          <li><a href="" title="">Ariel</a></li>
+          <li><a href="" title="">Britannia</a></li>
+          <li><a href="" title="">Nescafe</a></li>
+          <li><a href="" title="">Colgate</a></li>
+          <li><a href="" title="">Horlicks</a></li>
+          <li><a href="" title="">Galaxy</a></li>
+          <li><a href="" title="">Complan</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Most popular Categories</h5>
+        <ul>
+          <li><a href="" title="">Fruits & Vegetables</a></li>
+          <li><a href="" title="">Basmati Rice</a></li>
+          <li><a href="" title="">Green Tea</a></li>
+          <li><a href="" title="">OTC</a></li>
+          <li><a href="" title="">Cheese</a></li>
+          <li><a href="" title="">Dry Fruits</a></li>
+          <li><a href="" title="">Chocolates & Sweets</a></li>
+          <li><a href="" title="">Soft Drinks</a></li>
+          <li><a href="" title="">Energy Drinks</a></li>
+          <li><a href="" title="">Bread Dairy & Eggs</a></li>
+          <li><a href="" title="">Olive Oils</a></li>
+          <li><a href="" title="">Grocery & Staples</a></li>
+          <li><a href="" title="">Sunflower Oils</a></li>
+          <li><a href="" title="">Liquid Soaps & Bars</a></li>
+          <li><a href="" title="">Meat</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Information &amp; Services</h5>
+        <ul>
+          <li><a href="" title="">About us</a></li>
+          <li><a href="" title="">Customer Speak</a></li>
+          <li><a href="" title="">In the Media</a></li>
+          <li><a href="" title="">Careers at Lemon n Leaves</a></li>
+          <li><a href="" title="">Privacy Policy</a></li>
+          <li><a href="" title="">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>If you have a question about our service or have an issue to report</h6>
+        <ul class="style">
+          <li><a href="" title="">Write to us ></a></li>
+          <li><a href="" title="">FAQs</a></li>
+          <li><a href="" title="">Contact Us</a></li>
+          <li><a href="" title="">FOLLOW US</a></li>
+        </ul>
+        <div class="social-media"> <a href="" title="Twitter"><img src="img/social-icons/twitter.png" alt="twitter icon"></a> <a href="" title="Youtube"><img src="img/social-icons/youtube.png" alt="youtube icon"></a> <a href="" title="Facebook"><img src="img/social-icons/facebook.png" alt="facebook icon"></a> <a href="" title="Linkedin"><img src="img/social-icons/linkedin.png" alt="linkedin icon"></a> <br>
+          <br>
+          <a href="" title="Pinterest"><img src="img/social-icons/pinterest.png" alt="pinterest icon"></a> <a href="" title="Flickr"><img src="img/social-icons/flickr.png" alt="flickr icon"></a> <a href="" title="Share"><img src="img/social-icons/share.png" alt="share icon"></a> <a href="" title="RSS"><img src="img/social-icons/rss.png" alt="rss icon"></a> </div>
+      </div>
+    </div>
+    <!-- Footer row ends --> 
+  </div>
+  <!--Footer Container ends --> 
+</footer>
