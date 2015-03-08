@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mavrick</groupId>
+	<artifactId>commerce</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>commerce</name>
+	<description>commerce</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-compiler-plugin-version>2.0.2</maven-compiler-plugin-version>
+		<java-version>1.6</java-version>
+		<junit-version>4.8.2</junit-version>
+		<maven-deploy-version>2.7</maven-deploy-version>
+	</properties>
+
+	<!-- <profiles> <profile> <id>deploy</id> <activation> <activeByDefault>false</activeByDefault> 
+		</activation> <distributionManagement> repo for Release artifact distribution 
+		<repository> <id>custsys-releases</id> <url>http://nexusrepo/releases</url> 
+		</repository> repo for SNAPSHOT artifact distribution <snapshotRepository> 
+		<id>custsys-snapshots</id> <url>http://nexusrepo/snapshots</url> </snapshotRepository> 
+		</distributionManagement> </profile> </profiles> -->
+
+	<!-- <repositories> <repository> <id>public</id> <url>http://nexusrepo./public</url> 
+		</repository> <repository> <id>central</id> <url>http://istmaven:8081/nexus/content/groups/everything</url> 
+		</repository> <repository> <id>thirdParty</id> <url>http://nexusrepo/content/repositories/thirdparty</url> 
+		</repository> </repositories> -->
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin-version}</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${maven-deploy-version}</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.3.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>4.6.0</version>
+		</dependency>
+		<!-- log4j dependency -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	</dependencies>
+</project>
